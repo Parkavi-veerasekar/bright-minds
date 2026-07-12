@@ -1,0 +1,14 @@
+.hero {
+    padding: 80px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    color: #1E293B;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 24px;
+    color: #64748B;
+}
