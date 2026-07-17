@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import "../styles/Navbar.css";
 
 function Navbar() {
@@ -6,20 +6,49 @@ function Navbar() {
     <nav className="navbar">
       <div className="logo">
         <h1 className="brand">
-  <span className="bright">BRIGHT</span>{" "}
-  <span className="m red">M</span>
-  <span className="m orange">I</span>
-  <span className="m green">N</span>
-  <span className="m yellow">D</span>
-  <span className="m purple">S</span>
-</h1></div>
+          <span className="bright">BRIGHT</span>{" "}
+          <span className="m">M</span>
+          <span className="i">I</span>
+          <span className="n">N</span>
+          <span className="d">D</span>
+          <span className="s">S</span>
+        </h1>
+
+        <p className="tagline">
+          Pre-Learning Skill Centre
+        </p>
+      </div>
 
       <ul className="nav-links">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/gallery">Gallery</Link></li>
-        <li><Link to="/register">Register</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
+        <li>
+          <HashLink smooth to="/#home">
+            Home
+          </HashLink>
+        </li>
+
+        <li>
+          <HashLink smooth to="/#about">
+            About
+          </HashLink>
+        </li>
+
+        <li>
+          <HashLink smooth to="/#gallery">
+            Gallery
+          </HashLink>
+        </li>
+
+        <li>
+          <HashLink smooth to="/#register">
+            Register
+          </HashLink>
+        </li>
+
+        <li>
+          <HashLink smooth to="/#contact">
+            Contact
+          </HashLink>
+        </li>
       </ul>
     </nav>
   );

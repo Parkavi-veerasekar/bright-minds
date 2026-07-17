@@ -1,0 +1,240 @@
+/* ================= REGISTER SECTION ================= */
+
+.register-section{
+    padding:100px 8%;
+    background:#f7fbff;
+}
+
+.register-heading{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.register-heading span{
+    color:#163d8f;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-size:14px;
+}
+
+.register-heading h2{
+    font-size:48px;
+    color:#163d8f;
+    margin:20px 0;
+    font-weight:700;
+}
+
+.register-heading p{
+    max-width:700px;
+    margin:auto;
+    color:#666;
+    line-height:1.8;
+    font-size:17px;
+}
+
+/* ================= TWO COLUMN ================= */
+
+.register-container{
+
+    display:grid;
+
+    grid-template-columns:1fr 1.1fr;
+
+    gap:70px;
+
+    align-items:flex-start;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-side{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:35px;
+}
+
+.contact-card{
+
+    display:flex;
+
+    gap:22px;
+
+    align-items:flex-start;
+}
+
+.icon{
+
+    color:#163d8f;
+
+    font-size:28px;
+
+    min-width:30px;
+
+    margin-top:5px;
+}
+
+.contact-card h4{
+
+    color:#163d8f;
+
+    margin-bottom:8px;
+
+    letter-spacing:1px;
+
+    font-size:18px;
+}
+
+.contact-card p{
+
+    color:#555;
+
+    line-height:1.8;
+
+    font-size:16px;
+}
+
+/* ================= FORM ================= */
+
+.register-form{
+
+    background:#fff;
+
+    padding:45px;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.row{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:18px;
+
+    margin-bottom:18px;
+}
+
+.register-form input,
+.register-form select,
+.register-form textarea{
+
+    width:100%;
+
+    padding:16px;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    margin-bottom:18px;
+
+    transition:.3s;
+
+    font-family:inherit;
+
+    background:#fafafa;
+}
+
+.register-form input:focus,
+.register-form select:focus,
+.register-form textarea:focus{
+
+    outline:none;
+
+    border-color:#163d8f;
+
+    background:#fff;
+
+    box-shadow:0 0 0 3px rgba(22,61,143,.12);
+}
+
+.register-form textarea{
+
+    resize:none;
+}
+
+.register-form button{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    background:#163d8f;
+
+    color:#fff;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.register-form button:hover{
+
+    background:#0d2f73;
+
+    transform:translateY(-3px);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:992px){
+
+.register-container{
+
+    grid-template-columns:1fr;
+
+    gap:50px;
+}
+
+.row{
+
+    grid-template-columns:1fr;
+}
+
+.register-heading h2{
+
+    font-size:36px;
+}
+
+}
+
+@media(max-width:768px){
+
+.register-section{
+
+    padding:70px 6%;
+}
+
+.register-form{
+
+    padding:30px;
+}
+
+.register-heading h2{
+
+    font-size:30px;
+}
+
+.register-heading p{
+
+    font-size:15px;
+}
+
+}

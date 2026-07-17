@@ -1,56 +1,282 @@
+/* ================= HERO ================= */
 
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 70px 80px;
-  background: #f5f7fc;
+.hero{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    padding:0 8%;
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    position:relative;
+    overflow:hidden;
+
+    transition:background-image 1.2s ease-in-out;
+    animation:zoomImage 8s linear infinite alternate;
 }
 
-.hero-content {
-  width: 50%;
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
 }
 
-.hero-content h1 {
-  font-size: 55px;
-  color: #1f3c88;
-  margin-bottom: 20px;
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:700px;
+
+    animation:slideInRight .9s ease;
+
+    padding:20px 0;
 }
 
-.hero-content p {
-  font-size: 20px;
-  color: #555;
-  line-height: 1.8;
-  margin-bottom: 30px;
+/* ================= TITLE ================= */
+
+.hero-content h1{
+
+    font-size:72px;
+
+    font-weight:800;
+
+    line-height:1.1;
+
+    margin-bottom:15px;
+
+    color:white;
+
+    text-shadow:0 5px 15px rgba(0,0,0,.4);
 }
 
-.hero-content button {
-  background: #1f3c88;
-  color: white;
-  padding: 15px 35px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 18px;
+.hero-content h2{
+
+    font-size:32px;
+
+    font-weight:500;
+
+    color:white;
+
+    margin-bottom:30px;
+
+    text-shadow:0 5px 15px rgba(0,0,0,.4);
 }
 
-.hero-image img {
-  width: 550px;
-  border-radius: 15px;
+/* ================= COURSE TAGS ================= */
+
+.course-tags{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:35px;
 }
 
-.hero-btn {
-  display: inline-block;
-  padding: 14px 30px;
-  background: #163d8f;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: 600;
-  transition: 0.3s ease;
+.course-tags span{
+
+    background:rgba(255,255,255,.18);
+
+    color:white;
+
+    padding:12px 24px;
+
+    border-radius:30px;
+
+    border:1px solid rgba(255,255,255,.4);
+
+    backdrop-filter:blur(6px);
+
+    font-weight:600;
 }
 
-.hero-btn:hover {
-  background: #0d2f73;
+/* ================= DESCRIPTION ================= */
+
+.hero-content p{
+
+    color:white;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    max-width:650px;
+
+    margin-bottom:40px;
+
+    text-shadow:0 3px 10px rgba(0,0,0,.4);
+}
+
+/* ================= BUTTONS ================= */
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+}
+
+.hero-btn{
+
+    background:#FFD54F;
+
+    color:#163d8f;
+
+    padding:16px 38px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.hero-btn:hover{
+
+    background:white;
+
+    transform:translateY(-4px);
+}
+
+.hero-outline-btn{
+
+    border:2px solid white;
+
+    color:white;
+
+    padding:16px 38px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.hero-outline-btn:hover{
+
+    background:white;
+
+    color:#163d8f;
+
+    transform:translateY(-4px);
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes slideInRight{
+
+    0%{
+        opacity:0;
+        transform:translateX(120px);
+    }
+
+    100%{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:992px){
+
+.hero{
+
+justify-content:center;
+
+text-align:center;
+
+padding:0 6%;
+}
+
+.hero-content{
+
+max-width:100%;
+}
+
+.course-tags,
+.hero-buttons{
+
+justify-content:center;
+}
+
+.hero-content h1{
+
+font-size:54px;
+}
+
+.hero-content h2{
+
+font-size:26px;
+}
+
+.hero-content p{
+
+font-size:18px;
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+
+height:90vh;
+}
+
+.hero-content h1{
+
+font-size:42px;
+}
+
+.hero-content h2{
+
+font-size:22px;
+}
+
+.hero-content p{
+
+font-size:16px;
+}
+
+.hero-btn,
+.hero-outline-btn{
+
+width:100%;
+
+text-align:center;
+}
+
+.course-tags{
+
+justify-content:center;
+}
+
+}
+
+@keyframes zoomImage{
+
+    0%{
+        background-size:100%;
+    }
+
+    100%{
+        background-size:110%;
+    }
+
 }
