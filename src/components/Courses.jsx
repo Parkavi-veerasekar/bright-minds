@@ -1,5 +1,5 @@
 import "../styles/Courses.css";
-
+import { HashLink } from "react-router-hash-link";
 import abacus from "../assets/Courses/Abacus.jpg";
 import vedic from "../assets/Courses/vedic.jpg";
 import phonics from "../assets/Courses/phonics.jpg";
@@ -97,8 +97,11 @@ function Courses() {
               <li>✔ Vocabulary</li>
               <li>✔ Communication</li>
             </ul>
-
-            <button>Learn More →</button>
+            <div className="learnmore">
+              <button>Learn More →</button>
+          
+            </div>
+            
 
           </div>
 
